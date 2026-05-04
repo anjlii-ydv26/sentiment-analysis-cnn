@@ -2,6 +2,8 @@
 
 A deep learning project that classifies movie reviews as **positive or negative** using a Convolutional Neural Network trained on the IMDB dataset.
 
+This project simulates a real-world NLP pipeline, including data preprocessing, model training, debugging, evaluation, and deployment-ready inference.
+
 Achieved **85.3% accuracy** through systematic experimentation, hyperparameter tuning, and model optimization.
 
 Includes:
@@ -50,17 +52,8 @@ Such models are widely used in:
 
 Run the app:
 
-```
+```bash
 python app.py
-```
-
-Example:
-
-Input: This movie was amazing
-Output: Positive (Confidence: ~85%)
-
-Input: Worst movie ever seen
-Output: Negative (Confidence: ~95%)
 
 ---
 
@@ -176,9 +169,10 @@ Sentiment-Analysis-CNN/
 
 ## 🔮 Future Improvements
 
-* Use pretrained embeddings (GloVe / Word2Vec)
-* Try LSTM / Transformer models
-* Deploy as a web application
+* Integrate pretrained embeddings (GloVe / Word2Vec)
+* Upgrade to LSTM or Transformer-based models (BERT)
+* Deploy as an interactive web application using Streamlit
+* Improve handling of neutral and context-dependent sentences
 
 ---
 
