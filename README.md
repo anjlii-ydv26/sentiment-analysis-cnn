@@ -1,5 +1,9 @@
 # 🎬 Sentiment Analysis using CNN (PyTorch)
 
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![PyTorch](https://img.shields.io/badge/PyTorch-DeepLearning-orange)
+![Accuracy](https://img.shields.io/badge/Accuracy-85.3%25-green)
+
 A deep learning project that classifies movie reviews as **positive or negative** using a Convolutional Neural Network trained on the IMDB dataset.
 
 Achieved **85.3% accuracy** through systematic experimentation, hyperparameter tuning, and model optimization.
@@ -52,14 +56,9 @@ python app.py
 
 Example Predictions:
 
-Input: This movie was amazing and emotional
-Output: Positive (Confidence: 99%)
-
-Input: Worst movie ever seen
-Output: Negative (Confidence: 96%)
-
-Input: It's too good
-Output: Uncertain (~60%)
+- "This movie was amazing and emotional" → Positive (99%)
+- "Worst movie ever seen" → Negative (96%)
+- "It's too good" → Uncertain (~60%)
 
 ---
 
