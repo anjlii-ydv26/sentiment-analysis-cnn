@@ -1,14 +1,30 @@
-# Sentiment Analysis using CNN (PyTorch)
+# 🎬 Sentiment Analysis using CNN (PyTorch)
 
-## Overview
+A deep learning project that classifies movie reviews as **positive or negative** using a Convolutional Neural Network trained on the IMDB dataset.
 
-This project implements a **Sentiment Analysis model** using a Convolutional Neural Network (CNN) trained on the IMDB movie reviews dataset.
+Achieved **85.3% accuracy** through systematic experimentation, hyperparameter tuning, and model optimization.
 
-The goal was not only to build a working model but to **understand model learning behavior**, improve performance through experimentation, and ensure consistency between training and inference.
+Includes:
+
+* Experiment tracking
+* Training visualizations
+* Real-time prediction system
 
 ---
 
-## Features
+## 💡 Why This Project
+
+This project demonstrates how deep learning can be applied to understand human language and sentiment.
+
+Such models are widely used in:
+
+* Product review analysis
+* Social media sentiment tracking
+* Recommendation systems
+
+---
+
+## 🚀 Features
 
 * Text preprocessing and cleaning
 * Custom vocabulary creation and encoding
@@ -20,39 +36,61 @@ The goal was not only to build a working model but to **understand model learnin
 
 ---
 
-## Model Architecture
+## 🧠 Model Architecture
 
-* **Embedding Layer** (128-dim word vectors)
-* **Convolutional Layers** (filters: 2, 3, 4, 5)
-* **Max Pooling**
-* **Dropout (0.4)** for regularization
-* **Fully Connected Layer** for classification
+* Embedding Layer (128 dimensions)
+* Convolutional Layers (filter sizes: 2, 3, 4, 5)
+* Max Pooling
+* Dropout (0.4)
+* Fully Connected Layer
 
 ---
 
-## Training Visualization
+## 🎯 Demo (Command Line)
 
-### Loss Curve
+Run the app:
+
+```
+python app.py
+```
+
+Example:
+
+Input: This movie was amazing
+Output: Positive (Confidence: ~85%)
+
+Input: Worst movie ever seen
+Output: Negative (Confidence: ~95%)
+
+---
+
+## 📊 Training Visualization
+
+### 📉 Loss Curve
 
 ![Loss Curve](assets/loss_curve.png)
 
-Shows how the training loss decreases over epochs, indicating that the model is learning effectively.
-
-### Accuracy Over Runs
-
-![Accuracy](assets/accuracy_runs.png)
-
-Tracks how model accuracy improved across different experiments and parameter tuning.
-
-## Confusion Matrix
-
-![Confusion Matrix](assets/confusion_matrix.png)
-
-The confusion matrix shows that the model correctly classifies most positive and negative reviews, with minor errors in ambiguous cases.
+Shows how the model loss decreases over epochs, indicating effective learning.
 
 ---
 
-## Experiments & Results
+### 📈 Accuracy Over Runs
+
+![Accuracy](assets/accuracy_runs.png)
+
+Shows improvement in model performance across experiments.
+
+---
+
+### 📊 Confusion Matrix
+
+![Confusion Matrix](assets/confusion_matrix.png)
+
+Shows how well the model distinguishes between positive and negative reviews.
+
+---
+
+## 📈 Experiments & Results
 
 | Data Size | Epochs | Accuracy   |
 | --------- | ------ | ---------- |
@@ -63,45 +101,17 @@ The confusion matrix shows that the model correctly classifies most positive and
 
 ---
 
-## Key Observations
+## 🚨 Key Debugging Insight
 
-* Increasing dataset size improved generalization
-* More convolutional filters improved feature extraction
-* Dropout helped reduce overfitting
-* Gradient clipping stabilized training
-* Accuracy improvements plateaued after ~85% with CNN
+Initially, the model gave incorrect predictions due to a mismatch between training and inference vocabulary.
 
----
+This issue was resolved by saving and reusing the same vocabulary (`vocab.pkl`), ensuring consistent input representation.
 
-## Challenges Faced
-
-* **Incorrect predictions due to vocabulary mismatch**
-  → Fixed by saving and loading the same vocabulary (`vocab.pkl`)
-
-* **Overfitting at low loss values**
-  → Solved using dropout and parameter tuning
-
-* **Uncertain predictions on short/neutral sentences**
-  → Handled using confidence threshold
+This significantly improved prediction reliability.
 
 ---
 
-## Sample Predictions
-
-```
-Input: This movie was amazing and emotional  
-Output: Positive (99.87%)
-
-Input: Worst movie ever seen  
-Output: Negative (96.93%)
-
-Input: It's too good  
-Output: Uncertain (~59%)
-```
-
----
-
-## Tech Stack
+## 🛠 Tech Stack
 
 * Python
 * PyTorch
@@ -111,7 +121,7 @@ Output: Uncertain (~59%)
 
 ---
 
-## How to Run
+## ▶️ How to Run
 
 ### 1. Install dependencies
 
@@ -119,15 +129,11 @@ Output: Uncertain (~59%)
 pip install -r requirements.txt
 ```
 
----
-
 ### 2. Train the model
 
 ```
 python train.py
 ```
-
----
 
 ### 3. Run prediction app
 
@@ -137,7 +143,7 @@ python app.py
 
 ---
 
-## Project Structure
+## 📂 Project Structure
 
 ```
 Sentiment-Analysis-CNN/
@@ -158,25 +164,24 @@ Sentiment-Analysis-CNN/
 
 ---
 
-## Key Learnings
+## 📚 Key Learnings
 
 * CNN can effectively capture local patterns in text
-* Model performance improves significantly with more data
-* Tracking experiments is essential in ML workflows
-* Consistency between training and inference is critical
-* Real-world ML involves debugging, not just training
+* Model performance improves with more data
+* Experiment tracking is crucial in ML workflows
+* Training and inference consistency is critical
+* Real-world ML involves debugging and iteration
 
 ---
 
-## Future Improvements
+## 🔮 Future Improvements
 
 * Use pretrained embeddings (GloVe / Word2Vec)
-* Implement LSTM / Transformer-based models
-* Deploy using Streamlit web app
-* Add validation accuracy tracking
+* Try LSTM / Transformer models
+* Deploy as a web application
 
 ---
 
-## Author
+## 👩‍💻 Author
 
 Anjali Yadav
