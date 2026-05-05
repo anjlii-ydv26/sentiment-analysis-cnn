@@ -24,6 +24,23 @@ Such models are widely used in:
 
 ---
 
+## 📦 Dataset
+
+This project uses the IMDB movie reviews dataset.
+
+The dataset is not included in the repository due to size constraints.
+
+To train the model:
+
+1. Download the dataset from:
+   https://ai.stanford.edu/~amaas/data/sentiment/
+
+2. Extract it and place it in the project directory.
+
+3. Update the dataset path in `train.py` if required.
+
+---
+
 ## 🚀 Features
 
 * Text preprocessing and cleaning
