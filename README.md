@@ -26,16 +26,16 @@ Such models are widely used in:
 
 ## 📦 Dataset
 
-This project uses the IMDB movie reviews dataset.
+This project uses the IMDB 50K Movie Reviews dataset from Kaggle.
 
-The dataset is not included in the repository due to size constraints.
+The dataset is not included in this repository due to size constraints.
 
 To train the model:
 
-1. Download the dataset from:
-   https://ai.stanford.edu/~amaas/data/sentiment/
+1. Download the dataset from Kaggle:
+   https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews
 
-2. Extract it and place it in the project directory.
+2. Place the CSV file in the project directory.
 
 3. Update the dataset path in `train.py` if required.
 
